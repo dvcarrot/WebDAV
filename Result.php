@@ -1,9 +1,9 @@
 <?php
-namespace My\WebDAV;
+namespace dvcarrot\WebDAV;
 
 /**
  * Class Result
- * @package My\WebDAV
+ * @package dvcarrot\WebDAV
  */
 class Result
 {

@@ -1,7 +1,7 @@
 <?php
-namespace My\WebDAV\Config;
+namespace dvcarrot\WebDAV\Config;
 
-use My\WebDAV\Config;
+use dvcarrot\WebDAV\Config;
 
 class YaDisk extends Config
 {

@@ -1,9 +1,9 @@
 <?php
-namespace My\WebDAV;
+namespace dvcarrot\WebDAV;
 
 /**
  * Class Client
- * @package My\WebDAV
+ * @package dvcarrot \WebDAV
  */
 class Client
 {
@@ -102,11 +102,7 @@ class Client
      */
     final private function request($url, $headers = array(), $method = '', $file = null)
     {
-        if (!$this->curl) {
-            $this->curl = curl_init();
-        }
-
-        $ch = &$this->curl;
+        $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_FAILONERROR, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -133,7 +129,7 @@ class Client
         $response = curl_exec($ch);
         $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-        // curl_close($ch);
+        curl_close($ch);
 
         $result = new Result($statusCode, $response);
 

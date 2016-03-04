@@ -2,7 +2,9 @@
 My Simple WebDAV Client
 
 ## example
-    $config = new My\WebDAV\Config\YaDisk('username', 'password');
-    $client = new My\WebDAV\Client($config);
+    use dvcarrot\WebDAV\Config\YaDisk as Config;
+    use dvcarrot\WebDAV\Client;
+    $config = new Config('username', 'password');
+    $client = new Client($config);
     $result = $client->propfind('folder');
     var_dump($result);
